@@ -1,27 +1,33 @@
 .page-wrapper
-  %h1
+  %h1#whoami
     .element
 
   .topher-face= image_tag 'pic-mid.JPG'
 
   #topleft{src: 'pic-top-left.JPG'}
-  #topcenter{src: 'pic-mid.JPG'}
+  #topcenter{src: 'pic-top.JPG'}
   #topright{src: 'pic-top-right.JPG'}
+
+  #centerleft{src: 'pic-left.JPG'}
+  #centercenter{src: 'pic-mid-touch.JPG'}
+  #centerright{src: 'pic-right.JPG'}
+
+
   #bottomleft{src: 'pic-bot-left.JPG'}
   #bottomcenter{src: 'pic-bot.JPG'}
   #bottomright{src: 'pic-bot-right.JPG'}
 
 
 :javascript
-  // $(function(){
-  //   $(window).load(function(){
-  //     $(".element").typed({
-  //       strings: ["Hello.", "I'm Christopher"],
-  //       typeSpeed: 0,
-  //       backspeed: 20000
-  //     });
-  //   })
-  // });
+  $(function(){
+    $(window).load(function(){
+      $(".element").typed({
+        strings: ["Hello.", "I'm Christopher"],
+        typeSpeed: 0,
+        backspeed: 20000
+      });
+    })
+  });
 
 
 
@@ -46,8 +52,6 @@
           vertical = "bottom";
         }
 
-        vertical = (top < height/2) ? "top": "bottom";
-        
         id = vertical + horizontal;
         
         if(id == current) {
