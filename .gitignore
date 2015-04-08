@@ -7,6 +7,9 @@
 # Ignore bundler config.
 /.bundle
 
+/vendor/bundle/
+/vendor/ruby/
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -14,3 +17,12 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+.DS_Store
+/public/cache
+/public/stylesheets/compiled
+/public/system/*
+/spec/tmp/*
+
+#ignore sublime files
+./sublime-workspace

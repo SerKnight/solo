@@ -1,28 +1,63 @@
-.page-wrapper
-  %h1#whoami
-    .element
-
-  .topher-face= image_tag 'pic-mid.JPG'
-
-  #topleft{src: 'pic-top-left.JPG'}
-  #topcenter{src: 'pic-top.JPG'}
-  #topright{src: 'pic-top-right.JPG'}
-
-  #centerleft{src: 'pic-left.JPG'}
-  #centercenter{src: 'pic-mid-touch.JPG'}
-  #centerright{src: 'pic-right.JPG'}
+.looking-glass
+  .container-fluid
+    .row#whoami
+      .col-md-12
+        #command-line.cli
+          .element
 
 
-  #bottomleft{src: 'pic-bot-left.JPG'}
-  #bottomcenter{src: 'pic-bot.JPG'}
-  #bottomright{src: 'pic-bot-right.JPG'}
+    .row.topher
+      .col-md-12
+        .topher-face= image_tag 'pic-mid.JPG'
+
+      #topleft{src: 'pic-top-left.JPG'}
+      #topcenter{src: 'pic-top.JPG'}
+      #topright{src: 'pic-top-right.JPG'}
+
+      #centerleft{src: 'pic-left.JPG'}
+      #centercenter{src: 'pic-top-close.JPG'}
+      #centerright{src: 'pic-right.JPG'}
+
+
+      #bottomleft{src: 'pic-bot-left.JPG'}
+      #bottomcenter{src: 'pic-mid-smash.JPG'}
+      #bottomright{src: 'pic-bot-right.JPG'}
+
+.container-fluid
+  .row
+    .col-md-12
+      %h1
+        Skills
+      .jumbotron
+        %h4 Technical
+        Ruby, Rails, HTML, Sass, Javascript, jQuery, Ajax, unix, Github, basic linux, cross browser, Postgresql
+
+        %h4 Tools
+        Amazon Web Services, Heroku, Digital Ocean, Sublime Text
+
+        %h4 Project
+        Project Management, Customer Management, Statement Of Work, CRM's
+
+
+
+  .row
+    .col-md-12
+      .jumbotron 
+        Interests
+      .jumbotron 
+        Interests
+      .jumbotron 
+        Interests
+
 
 
 :javascript
+  $('.looking-glass').css('height', $(window).height())
+
   $(function(){
     $(window).load(function(){
       $(".element").typed({
-        strings: ["Hello.", "I'm Christopher"],
+        strings: ["web development", "ruby on rails", "javascript", "Anthropologist Programmer"],
         typeSpeed: 0,
         backspeed: 20000
       });
@@ -57,8 +92,7 @@
         if(id == current) {
             return;
         }
-
-        console.log()
+       
         current = id;
         $(".topher-face img").attr('src', '/assets/'+$("#" + id).attr('src'));
     });

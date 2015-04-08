@@ -15,42 +15,122 @@
  */
 
 
-.page-wrapper {
-	position: relative;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin: 10px;
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-	#whoami {
-		position: absolute;
-		text-align: center;
-		width: 100%;
+@font-face
+{
+font-family: nexa_bold;
+src: asset-url("Nexa-Bold.otf");
+}
+
+@font-face
+{
+font-family: nexa_light;
+src: asset-url("Nexa-Light.otf");
+}
+
+@font-face
+{
+font-family: bebas_neue;
+src: asset-url("BebasNeueRegular.otf");
+}
+
+@font-face
+{
+font-family: bebas_neue_light;
+src: asset-url("BebasNeueLight.otf");
+}
+
+@font-face
+{
+font-family: bebas_neue_thin;
+src: asset-url("BebasNeueThin.otf");
+}
+
+
+
+
+
+
+
+.header-fix {
+  position: fixed;
+  width: 100%;
+
+	.item {
+	  margin: 20px;
+	}
+	.left {
+	  float: left;
+	}
+
+	.right {
+		float: right; 
 	}
 }
 
+.looking-glass {
+  background: rgba(0,0,0, 0.8);
+}
+
+.header-scroll {
+	background: whitesmoke;
+  z-index: 999;
+}
+
+#whoami {
+	text-align: center;
+	width: 100%;
+  font-family: "nexa_bold";
+  font-size: 40px;
+  padding-top: 10%;
+}
+
 .topher {
-	position: relative;
-  img {
-	  display: none;
-  	height: 100px;
-		width: auto;
-  }
+	position: absolute;
+	bottom: 0px;
+	height: 315px;
+	width: 100%;
 }
 
 .topher-face {
 	position: relative;
 	text-align: center;
-	float: left;
-	margin-top: 200px;
-	width: 100%;
+	margin: 0 auto;
+	width: 30%;
+	overflow: hidden;
 
 	img {
 	  position: relative;
-		height: 300px;	  
-		-moz-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
+	  float: left;
+	  -moz-transform: rotate(90deg);
+	  -webkit-transform: rotate(90deg);
+	  transform: rotate(90deg);
+	  max-width: 100%;
 	}
+}
+
+.cli {
+  color: lime; 
+  font-family: bebas_neue_light;
+  font-size: 35px;
+  letter-spacing: 3px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  color: lime;
+}
+
+#command-line {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	float: none;
+	text-align: center;
+	padding-top: 50px;
+	height: 25px;
+	padding-bottom: 50px;
+
 }
