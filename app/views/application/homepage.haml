@@ -1,0 +1,61 @@
+.page-wrapper
+  %h1
+    .element
+
+  .topher-face= image_tag 'pic-mid.JPG'
+
+  #topleft{src: 'pic-top-left.JPG'}
+  #topcenter{src: 'pic-mid.JPG'}
+  #topright{src: 'pic-top-right.JPG'}
+  #bottomleft{src: 'pic-bot-left.JPG'}
+  #bottomcenter{src: 'pic-bot.JPG'}
+  #bottomright{src: 'pic-bot-right.JPG'}
+
+
+:javascript
+  // $(function(){
+  //   $(window).load(function(){
+  //     $(".element").typed({
+  //       strings: ["Hello.", "I'm Christopher"],
+  //       typeSpeed: 0,
+  //       backspeed: 20000
+  //     });
+  //   })
+  // });
+
+
+
+  $(function(){
+    var current;
+    $(document).mousemove(function(cursor){
+        var left = cursor.pageX, top = cursor.pageY, win = $(window),
+            width = win.width(), height = win.height(), horizontal, vertical, id;
+
+        if( left < width / 3 ){
+          horizontal = "left";
+        } else if ( (left > width / 3) && ( left < (width - width / 3)) ){
+          horizontal = "center";
+        } else if (left > width / 3) {
+          horizontal = "right";
+        }
+        if( top < height / 3 ){
+          vertical = "top";
+        } else if ( (top > height / 3) && ( top < (height - height / 3)) ){
+          vertical = "center";
+        } else if (top > height / 3) {
+          vertical = "bottom";
+        }
+
+        vertical = (top < height/2) ? "top": "bottom";
+        
+        id = vertical + horizontal;
+        
+        if(id == current) {
+            return;
+        }
+
+        console.log()
+        current = id;
+        $(".topher-face img").attr('src', '/assets/'+$("#" + id).attr('src'));
+    });
+  })
