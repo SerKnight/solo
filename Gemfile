@@ -16,3 +16,7 @@ gem 'spring',        group: :development
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'haml-rails'
+
+group :production do 
+  gem 'rails_12factor'
+end
