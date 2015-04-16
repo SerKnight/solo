@@ -8,20 +8,7 @@
 
     .row.topher
       .col-md-12
-        .topher-face= image_tag 'pic-mid.JPG'
-
-      #topleft{src: 'pic-top-left.JPG'}
-      #topcenter{src: 'pic-top.JPG'}
-      #topright{src: 'pic-top-right.JPG'}
-
-      #centerleft{src: 'pic-left.JPG'}
-      #centercenter{src: 'pic-top-close.JPG'}
-      #centerright{src: 'pic-right.JPG'}
-
-
-      #bottomleft{src: 'pic-bot-left.JPG'}
-      #bottomcenter{src: 'pic-mid-smash.JPG'}
-      #bottomright{src: 'pic-bot-right.JPG'}
+        .topher-face= image_tag 'mid.JPG'
 
 .container-fluid
   .row
@@ -48,52 +35,4 @@
         Interests
       .jumbotron 
         Interests
-
-
-
-:javascript
-  $('.looking-glass').css('height', $(window).height())
-
-  $(function(){
-    $(window).load(function(){
-      $(".element").typed({
-        strings: ["web development", "ruby on rails", "javascript", "Anthropologist Programmer"],
-        typeSpeed: 0,
-        backspeed: 20000
-      });
-    })
-  });
-
-
-
-  $(function(){
-    var current;
-    $(document).mousemove(function(cursor){
-        var left = cursor.pageX, top = cursor.pageY, win = $(window),
-            width = win.width(), height = win.height(), horizontal, vertical, id;
-
-        if( left < width / 3 ){
-          horizontal = "left";
-        } else if ( (left > width / 3) && ( left < (width - width / 3)) ){
-          horizontal = "center";
-        } else if (left > width / 3) {
-          horizontal = "right";
-        }
-        if( top < height / 3 ){
-          vertical = "top";
-        } else if ( (top > height / 3) && ( top < (height - height / 3)) ){
-          vertical = "center";
-        } else if (top > height / 3) {
-          vertical = "bottom";
-        }
-
-        id = vertical + horizontal;
-        
-        if(id == current) {
-            return;
-        }
-       
-        current = id;
-        $(".topher-face img").attr('src', '/assets/'+$("#" + id).attr('src'));
-    });
-  })
+  
