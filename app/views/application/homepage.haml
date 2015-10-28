@@ -2,11 +2,7 @@
   //%img#main-img{src: "#{@homepage_photo['urls']['regular']}"}
   // %img#main-img{src: asset_url(@homepage_img_url)}
 
-  .container-fluid
-    .row#whoami
-      #command-line.cli
-        .element
-          
+  .container-fluid          
     .row.topher-container
       .col-md-12
         %img.toph-img.visible-toph#botcenter{src: asset_url('mid.JPG') }
@@ -22,28 +18,35 @@
         %img#hulk-smash{src: asset_url('midtouch.JPG')}
 
     #skills-container
-      %h4 Interests
-      Amazon Web Services, Heroku, Digital Ocean, Sublime Text
-
       %h4 Technical
-      Ruby, Rails, HTML, CSS, Javascript, command line, servers
+      Ruby
+      %br
+      Rails
+      %br
+      Front-End
+      %br
+      Javascript
+      %br
+      Startups
 
       %h4 Projects
-      = link_to 'advlo.com', 'http://advlo.com'
+      = link_to 'nylon', 'http://www.nylon.com/', target: '_blank'
+      %br
+      = link_to 'gemgento', 'http://www.gemgento.com/', target: '_blank'
+      %br
+      = link_to 'sharethemo', 'http://www.sharethemo.com/', target: '_blank'
+      %br
+      = link_to 'advlo.com', 'http://advlo.com', target: '_blank'
+      %br
+      = link_to 'academy.scratch.com', 'http://academy.scratch.com', target: '_blank'
 
-:javascript
-  / var timer = 1000; //seconds
-  / var i = 0;
 
-  / setInterval(function(){
-  /   //effects of the img etc.
-    
-  /   if (i > 10 ) {
-  /     i++;
-  /   } else {
-  /     $('.looking-glass').css({
-  /       'background': "url('#{asset_url(@rot_advs.sample)}') no-repeat center center fixed"
-  /     })
-    
-  /   }
-  / }, timer)
+      %h4 Interests
+      Videography & Journalism
+      %br
+      Travel & Storytelling
+      %br
+      Sky & Scuba diving
+      %br
+      Doing super fun shit
+
