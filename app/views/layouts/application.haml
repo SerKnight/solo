@@ -7,15 +7,21 @@
     = csrf_meta_tags
   %body
     .header-fix.header-scroll
-      .item.left
-        Christopher
-      .item.right
-        Twitter
-      .item.right
-        Linked
-      .item.right
-        Github
-      .item.right
-        Youtube
+      .col.col-md-8
+        .item#header-name
+          Christopher Knight
+      .col.col-md-4#social-header
+        = link_to 'https://www.facebook.com/NomadicKnightTravel', target: '_blank' do        
+          .col-sm-1.item
+            = fa_stacked_icon "twitter", base: "square-o"
+        = link_to 'https://www.linkedin.com/in/serknight', target: '_blank' do              
+          .col-sm-1.item
+            = fa_stacked_icon "linkedin", base: "square-o"
+        = link_to 'https://github.com/serknight', target: '_blank' do              
+          .col-sm-1.item
+            = fa_stacked_icon "github-alt", base: "square-o"
+        = link_to 'http://youtube.com/editapartmentality', target: '_blank' do              
+          .col-sm-1.item
+            = fa_stacked_icon "youtube-square", base: "square-o"
     = yield
-    
+      

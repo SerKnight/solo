@@ -1,48 +1,49 @@
 .looking-glass
+  //%img#main-img{src: "#{@homepage_photo['urls']['regular']}"}
+  // %img#main-img{src: asset_url(@homepage_img_url)}
+
   .container-fluid
     .row#whoami
+      #command-line.cli
+        .element
+          
+    .row.topher-container
       .col-md-12
-        #command-line.cli
-          .element
+        %img.toph-img.visible-toph#botcenter{src: asset_url('mid.JPG') }
+        %img.toph-img#topleft{src: asset_url('topleft.JPG')}
+        %img.toph-img#topcenter{src: asset_url('topcenter.JPG')}
+        %img.toph-img#topright{src: asset_url('topright.JPG')}
+        %img.toph-img#centerright{src: asset_url('centerright.JPG')}
+        %img.toph-img#centercenter{src: asset_url('centercenter.JPG')}
+        %img.toph-img#centerleft{src: asset_url('centerleft.JPG')}
+        %img.toph-img#botleft{src: asset_url('botleft.JPG')}
+        %img.toph-img#botcenter{src: asset_url('botcenter.JPG')}
+        %img.toph-img#botright{src: asset_url('botright.JPG')}
+        %img#hulk-smash{src: asset_url('midtouch.JPG')}
 
+    #skills-container
+      %h4 Interests
+      Amazon Web Services, Heroku, Digital Ocean, Sublime Text
 
-    .row.topher
-      .col-md-12
-        .topher-face= image_tag 'mid.JPG'
+      %h4 Technical
+      Ruby, Rails, HTML, CSS, Javascript, command line, servers
 
-.container-fluid
-  .row
-    .col-md-12
-      %h1
-        Skills
-      .jumbotron
-        %h4 Technical
-        Ruby, Rails, HTML, Sass, Javascript, jQuery, Ajax, unix, Github, basic linux, cross browser, Postgresql
+      %h4 Projects
+      = link_to 'advlo.com', 'http://advlo.com'
 
-        %h4 Tools
-        Amazon Web Services, Heroku, Digital Ocean, Sublime Text
+:javascript
+  / var timer = 1000; //seconds
+  / var i = 0;
 
-        %h4 Project
-        Project Management, Customer Management, Statement Of Work, CRM's
-
-
-
-  .row
-    .col-md-12
-      .jumbotron 
-        Interests
-      .jumbotron 
-        Interests
-      .jumbotron 
-        Interests
-  
-
-#topleft{src: asset_url('topleft.JPG')}
-#topcenter{src: asset_url('topcenter.JPG')}
-#topright{src: asset_url('topright.JPG')}
-#centerright{src: asset_url('centerright.JPG')}
-#centercenter{src: asset_url('centercenter.JPG')}
-#centerleft{src: asset_url('centerleft.JPG')}
-#botleft{src: asset_url('botleft.JPG')}
-#botcenter{src: asset_url('botcenter.JPG')}
-#botright{src: asset_url('botright.JPG')}
+  / setInterval(function(){
+  /   //effects of the img etc.
+    
+  /   if (i > 10 ) {
+  /     i++;
+  /   } else {
+  /     $('.looking-glass').css({
+  /       'background': "url('#{asset_url(@rot_advs.sample)}') no-repeat center center fixed"
+  /     })
+    
+  /   }
+  / }, timer)

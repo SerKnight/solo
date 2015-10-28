@@ -29,18 +29,25 @@ function lookingGlass() {
     console.log("id => " + id)
    
     current = id;
-    
-    $(".topher-face img").attr('src', $('#'+id).attr('src') );
+    $('.toph-img').hide()
+    $("#"+id).show()
   });
 
-	$('.looking-glass').css('height', $(window).height())
+  $('.looking-glass').css('height', $(window).height())
+
+  $("#botcenter").hover(function(){
+    $(this).hide()
+    $('#hulk-smash').show()
+  },function(){
+    $('#hulk-smash').fadeOut('slow')
+  })
 }
 
 
 function typedJs(){
   $(window).load(function(){
     $(".element").typed({
-      strings: ["Anthropology", "Programming", "ruby on rails", "javascript", "web development"],
+      strings: ["Anthropology", "Programming", "ruby on rails", "Javascript", "eCommerce", "Web Development", "Travel", ""],
       typeSpeed: 0,
       backspeed: 20000
     });

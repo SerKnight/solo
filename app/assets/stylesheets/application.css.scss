@@ -17,6 +17,7 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 @font-face
 {
@@ -48,9 +49,22 @@ font-family: bebas_neue_thin;
 src: asset-url("BebasNeueThin.otf");
 }
 
+body {
+	font-family: 'nexa_light';
+	font-size: 20px;
+}
 
 
+h4 {
+	font-family: 'bebas_neue';
+	font-size: 30px;
+}
 
+#header-name {
+	margin: 20px;
+	font-size: 20px;
+	float: left;
+}
 
 
 
@@ -58,7 +72,17 @@ src: asset-url("BebasNeueThin.otf");
   position: fixed;
   width: 100%;
 
+  a {
+  	color: #000;
+  }
+
+  a:hover {
+  	opacity: 0.95;
+  }
+
 	.item {
+	  float: right;
+	  cursor: pointer;
 	  margin: 20px;
 	}
 	.left {
@@ -71,11 +95,27 @@ src: asset-url("BebasNeueThin.otf");
 }
 
 .looking-glass {
-  background: rgba(0,0,0, 0.8);
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+	background: url('home1.jpeg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  #main-img {
+  	width: 100%;
+		opacity: 0.5;
+		position: fixed;
+    top: 0;
+  }
 }
 
 .header-scroll {
 	background: whitesmoke;
+	position: fixed;
   z-index: 999;
 }
 
@@ -87,33 +127,17 @@ src: asset-url("BebasNeueThin.otf");
   padding-top: 10%;
 }
 
-.topher {
+.topher-container {
 	position: absolute;
-	bottom: 0px;
-	height: 315px;
+	float: left;
 	width: 100%;
-}
-
-.topher-face {
-	position: relative;
+	bottom: 0px;
 	text-align: center;
-	margin: 0 auto;
-	width: 30%;
-	overflow: hidden;
-
-	img {
-	  position: relative;
-	  float: left;
-	  -moz-transform: rotate(90deg);
-	  -webkit-transform: rotate(90deg);
-	  transform: rotate(90deg);
-	  max-width: 100%;
-	}
 }
 
 .cli {
   color: lime; 
-  font-family: bebas_neue_light;
+  font-family: 'bebas_neue_light';
   font-size: 35px;
   letter-spacing: 3px;
   margin: 10px 0 0 10px;
@@ -132,5 +156,46 @@ src: asset-url("BebasNeueThin.otf");
 	padding-top: 50px;
 	height: 25px;
 	padding-bottom: 50px;
+}
+
+.toph-img {
+	display: none;
+	opacity: 0.65;
+}
+#hulk-smash {
+	opacity: 0.65;
+	display: none;
+}
+
+.visible-toph {
+	display: block;
+	display: inline;
+}
+
+#skills-container {
+	color: #fff;
+	opacity: 0.65;
+	font-size: 20px;
+	text-shadow: -2px 2px 16px #000;
+
+	a {
+		color: #fff;
+
+		&:hover {
+			opacity: 0.8;
+			text-decoration: none;
+		}
+	}
+}
+
+@media only screen and (max-width: 700px) {
+
+	#social-header {
+		float: left;
+
+		.item {
+			margin: 1px;
+		}
+	}	
 
 }

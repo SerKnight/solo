@@ -16,7 +16,14 @@ gem 'spring',        group: :development
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'haml-rails'
+gem 'font-awesome-rails'
+gem 'unsplash'
 
 group :production do 
   gem 'rails_12factor'
+end
+
+group :development do 
+	gem 'better_errors'
+	gem 'binding_of_caller'
 end
