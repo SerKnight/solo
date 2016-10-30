@@ -21,6 +21,8 @@ gem 'unsplash'
 
 group :production do 
   gem 'rails_12factor'
+  gem 'execjs'
+  gem 'therubyracer'
 end
 
 group :development do 
