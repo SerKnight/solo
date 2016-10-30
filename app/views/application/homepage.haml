@@ -17,36 +17,54 @@
         %img.toph-img#botright{src: asset_url('botright.JPG')}
         %img#hulk-smash{src: asset_url('midtouch.JPG')}
 
-    #skills-container
-      %h4 Technical
-      Ruby
-      %br
-      Rails
-      %br
-      Front-End
-      %br
-      Javascript
-      %br
-      Startups
+    .skills-container
+      .skill-section
+        %h4 Technical
+        Ruby, Rails, Javascript
+        %br
+        Front-End, UX Design
+        %br 
+        Automated Testing & eCommerce
+        %br
+        Whiteboard to SysAdmin
 
-      %h4 Projects
-      = link_to 'nylon', 'http://www.nylon.com/', target: '_blank'
-      %br
-      = link_to 'gemgento', 'http://www.gemgento.com/', target: '_blank'
-      %br
-      = link_to 'sharethemo', 'http://www.sharethemo.com/', target: '_blank'
-      %br
-      = link_to 'advlo.com', 'http://advlo.com', target: '_blank'
-      %br
-      = link_to 'academy.scratch.com', 'http://academy.scratch.com', target: '_blank'
+      .skill-section
+        %h4 Projects
+        = link_to 'Maui New York', 'http://maui.nyc/', target: '_blank'
+        %br
+        = link_to 'Adventure Local', 'http://advlo.com', target: '_blank'
+        %span /
+        = link_to 'MotoGuides', 'http://motoguides.com', target: '_blank'
+        %br
+        = link_to 'scratch.com', 'http://scratch.com', target: '_blank'
+        %span /
+        = link_to 'DJ Academy', 'http://academy.scratch.com', target: '_blank'
+        %span /
+        = link_to 'Events', 'http://events.scratch.com', target: '_blank'
+        %br
+        = link_to 'The Artolution', 'http://artolution.org/', target: '_blank'
+
+      .skill-section
+        %h4 Presentations
+        = link_to 'Magento Imagine', 'https://prezi.com/lbflimcvbp4g/gemgento/', target: '_blank'
+        %br
+        = link_to 'SpreeCommerce Conf', 'http://www.slideshare.net/Spark_Solutions/christopher-knight-academy-case-study-open-commerce-conference-2016', target: '_blank'
+      
 
 
-      %h4 Interests
-      Videography & Journalism
-      %br
-      Travel & Storytelling
-      %br
-      Sky & Scuba diving
-      %br
-      Doing super fun shit
+
+      .skill-section
+        %h4 Hobbies
+        %span{ class: 'youtube-video', "data-target" => "#video-modal", "data-toggle" => "modal", 'data-youtube-src' =>  "https://www.youtube.com/watch?v=-4i7cli7WNA"} Travel 
+        %span /
+        %span{ class: 'youtube-video', "data-target" => "#video-modal", "data-toggle" => "modal", 'data-youtube-src' =>  "https://www.youtube.com/watch?v=yP0Kwl2Fhhw"} Journalism
+        %br
+        %span{ class: 'youtube-video', "data-target" => "#video-modal", "data-toggle" => "modal", 'data-youtube-src' =>  "https://www.youtube.com/watch?v=XptmbFLZlg0"} Skateboarding
+        %span /
+        %span{ class: 'youtube-video', "data-target" => "#video-modal", "data-toggle" => "modal", 'data-youtube-src' =>  "https://www.youtube.com/watch?v=CrjVlYdqlDk"} Snowboarding
+        %br
+        %span{ class: 'youtube-video', "data-target" => "#video-modal", "data-toggle" => "modal", 'data-youtube-src' =>  "https://www.youtube.com/watch?v=UyLlPmQLCtA"} Sky Diving
+        %span /
+        %span{ class: 'youtube-video', "data-target" => "#video-modal", "data-toggle" => "modal", 'data-youtube-src' =>  "https://www.youtube.com/watch?v=qsg1cJt_kZg"} Scuba Diving
+
 
