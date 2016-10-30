@@ -35,6 +35,10 @@ function lookingGlass() {
 
   $('.looking-glass').css('height', $(document).height())
 
+  $(window).resize(function (){
+    $('.looking-glass').css('height', $(document).height())
+  })
+
   $("#botcenter").hover(function(){
     $(this).hide()
     $('#hulk-smash').show()

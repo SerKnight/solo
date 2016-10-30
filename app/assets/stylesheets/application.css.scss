@@ -136,11 +136,18 @@ h4 {
 .photo-credit {
 	position: fixed;
 	bottom: 0;
-	right: 0;
+	right: 50;
 	color: #fff;
 	font-size: 9px;
 	color: #fff;
 	margin: 5px;
+}
+
+#video-container {
+	.modal-dialog {
+		width: 100% !important;
+		max-width: 1427px !important;
+	}
 }
 
 .topher-container {
@@ -211,9 +218,9 @@ h4 {
 }
 
 .denver {
-	position: absolute;
-	bottom: 0;
-	left: 0;
+	position: fixed;
+	bottom: 00;
+	right: 0;
 	z-index: 100;
 	padding: 13px;
 	background: #fff;

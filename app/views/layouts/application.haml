@@ -9,7 +9,6 @@
   %body
     .denver{"data-target" => "#show-em-gusto", "data-toggle" => "modal", :type => "button"}
       = image_tag('denver.png')
-    / Modal
     #show-em-gusto.modal.fade{"aria-labelledby" => "gusty", :role => "dialog", :tabindex => "-1"}
       .modal-dialog{:role => "document"}
         .modal-content
@@ -21,9 +20,9 @@
             = image_tag asset_url('gusty.png')
           .modal-footer.text-center
             %h1.text-center Please Choose 1
-            %a.btn.btn-default{style: 'float: left;width: 33.3%; margin: 0;', :href => "mailto:chrisknight.mail@gmail.com?subject=It is not me, its you."} This is weird..
-            %a.btn.btn-danger{style: 'float: left;width: 33.3%; margin: 0;', :href => "mailto:chrisknight.mail@gmail.com?subject=This app has Gusto."} This app has got Gusto!
-            %a.btn.btn-primary{style: 'float: left;width: 33.3%; margin: 0;', :href => "mailto:chrisknight.mail@gmail.com?subject=Hey, this is the best time to come meet us!"} Lets meet!
+            %a.btn.btn-default{style: 'float: left;width: 30%; padding: 10px; margin: 1.5%;', :href => "mailto:chrisknight.mail@gmail.com?subject=It is not me, its you."} This is weird..
+            %a.btn.btn-danger{style: 'float: left;width: 30%; padding: 10px; margin: 1.5%;', :href => "mailto:chrisknight.mail@gmail.com?subject=This app has Gusto."} You got Gusto
+            %a.btn.btn-primary{style: 'float: left;width: 30%; padding: 10px; margin: 1.5%;', :href => "mailto:chrisknight.mail@gmail.com?subject=Hey, this is the best time to come meet us!"} Lets meet!
 
 
 
