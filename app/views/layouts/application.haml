@@ -7,8 +7,8 @@
     = csrf_meta_tags
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"}
   %body
-    .denver{"data-target" => "#show-em-gusto", "data-toggle" => "modal", :type => "button"}
-      = image_tag('denver.png')
+    / .denver{"data-target" => "#show-em-gusto", "data-toggle" => "modal", :type => "button"}
+    /   = image_tag('denver.png')
     #show-em-gusto.modal.fade{"aria-labelledby" => "gusty", :role => "dialog", :tabindex => "-1"}
       .modal-dialog{:role => "document"}
         .modal-content
