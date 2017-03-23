@@ -8,4 +8,13 @@ class ApplicationController < ActionController::Base
   	@rot_advs = ['home1.jpeg','home2.jpeg','home3.jpeg']
   	@homepage_img_url = @rot_advs.sample
   end
+
+
+  def download_resume
+  	send_file(
+    	"#{Rails.root}/public/ckk_dev_resume.pdf",
+	    filename: "Christopher_Knight_Developer.pdf",
+	    type: "application/pdf"
+	  )
+  end
 end

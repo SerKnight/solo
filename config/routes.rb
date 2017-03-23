@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'application#homepage'
+  get '/download-resume', to: "application#download_resume"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
